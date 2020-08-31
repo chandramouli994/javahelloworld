@@ -16,8 +16,6 @@ pipeline {
              steps {
                 sh 'cd /root/.jenkins/workspace/helloworld_example/target/'
                  echo "Copied file successfully"
-                 sh 'chmod 777 helloworld-1.1.jar'
-                 echo "Permission changed successfully"
                  sh 'java -jar helloworld-1.1.jar --port=8181'
                  echo "Running Java Application"
             }
