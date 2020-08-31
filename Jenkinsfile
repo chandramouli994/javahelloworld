@@ -14,11 +14,11 @@ pipeline {
         }
         stage('Running'){
              steps {
-                sh 'cp -rf /root/.jenkins/workspace/helloworld_example/target/helloworld-1.1.jar /tmp/'
+                sh 'cd /root/.jenkins/workspace/helloworld_example/target/'
                  echo "Copied file successfully"
-                 sh 'chmod 777 /tmp/helloworld-1.1.jar'
+                 sh 'chmod 777 helloworld-1.1.jar'
                  echo "Permission changed successfully"
-                 sh 'java -jar /tmp/helloworld-1.1.jar --port=8181'
+                 sh 'java -jar helloworld-1.1.jar --port=8181'
                  echo "Running Java Application"
             }
             
